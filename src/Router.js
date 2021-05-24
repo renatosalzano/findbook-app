@@ -11,7 +11,7 @@ const Router = () => {
     transition: transition ? "0.4s" : "none",
   };
   return (
-    <HashRouter basename="/findbook-app">
+    <HashRouter>
       <div className={`layout ${theme}`} style={style}>
         <div className="pages">
           <SearchBar />
