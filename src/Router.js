@@ -11,7 +11,7 @@ const Router = () => {
     transition: transition ? "0.4s" : "none",
   };
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/findbook-app">
       <div className={`layout ${theme}`} style={style}>
         <div className="pages">
           <SearchBar />

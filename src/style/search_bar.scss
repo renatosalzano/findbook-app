@@ -69,7 +69,7 @@ svg {
   border: var(--border);
   z-index: 100;
   input {
-    font-size: 16px;
+    font-size: var(--input_size);
     padding: 4px;
     width: calc(100% - 50px);
     color: var(--input_col);
@@ -92,9 +92,60 @@ svg {
   }
 }
 
-.focus {
-  border: 1px solid var(--select_col);
+// class = { src_container extend }
+.extend {
+  width: 100%;
 }
+
+// class = { src_container advanced }
+
+.advanced {
+  height: 35px;
+  .grid {
+    width: calc(100% - 50px);
+    height: 100%;
+    display: grid;
+    column-gap: 5px;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: "titolo autore editore";
+    input {
+      width: 100%;
+    }
+    .input_title {
+      grid-area: titolo;
+    }
+    .input_author {
+      grid-area: autore;
+    }
+
+    .input_publisher {
+      grid-area: editore;
+    }
+  }
+}
+
+// class = { src_container advanced expand }
+
+.expand {
+  height: 70px;
+  width: 100%;
+  .grid {
+    display: grid;
+    column-gap: 5px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "titolo autore" "editore editore";
+    input {
+      border-bottom: var(--border);
+    }
+  }
+  .search_button {
+    svg {
+      padding: 20px 5px;
+    }
+  }
+}
+
 .button_container {
   position: absolute;
   display: flex;
@@ -133,7 +184,7 @@ svg {
       color: var(--bulb_hover_col);
     }
   }
-  .advanced {
+  .active {
     color: var(--select_col);
   }
 }
@@ -142,7 +193,8 @@ svg {
 .hidden {
   opacity: 0;
 }
-// class = { normal_src_container extend }
-.extend {
-  width: 100%;
+
+// class = { src_container focus }
+.focus {
+  border: 1px solid var(--select_col);
 }

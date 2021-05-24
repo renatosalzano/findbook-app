@@ -54,7 +54,7 @@ const SearchBar = () => {
   return (
     <div className="fixed_container">
       <div className="margin" style={style}></div>
-      <div className={`search_bar_container ${advanced} ${fristSrc}`}>
+      <div className={`search_bar_container ${fristSrc}`}>
         {advanced ? (
           <AdvancedSearch
             submit_search={submit_search}
@@ -62,6 +62,7 @@ const SearchBar = () => {
             isFocus={isFocus}
             toggle_extend={toggle_extend}
             toggle_focus={toggle_focus}
+            advanced={advanced}
           />
         ) : (
           <NormalSearch

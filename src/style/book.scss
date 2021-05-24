@@ -1,3 +1,7 @@
+a {
+  color: var(--select_col);
+}
+
 .book_list {
   display: flex;
   flex-direction: column;
@@ -129,6 +133,15 @@
   }
   .book_body {
     border-bottom: var(--border);
+    .cover {
+      img {
+        width: var(--book_cover_detail_width);
+      }
+    }
+    .cover_miss {
+      width: var(--book_cover_detail_width);
+      height: var(--book_cover_detail_height);
+    }
   }
 }
 

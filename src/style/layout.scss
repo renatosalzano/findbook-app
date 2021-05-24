@@ -31,26 +31,12 @@ body {
   --book_cover_width: 128px;
   --book_cover_height: 180px;
 
+  --book_cover_detail_width: 128px;
+  --book_cover_detail_height: 180px;
+
   --font_404_size: 80px;
   --quote_404_size: 30px;
   --book_404_padd: 40px 120px;
-}
-
-@media screen and (max-width: 600px) {
-  #root {
-    --idle_src_bar_width: 90px;
-    --border_radius: 0;
-    --font_404_size: 60px;
-    --quote_404_size: 20px;
-    --book_404_padd: 30px 60px;
-
-    --title_size: 20px;
-    --title_detail_size: 22px;
-    --book_author_detail_size: 18px;
-
-    --book_cover_width: 80px;
-    --book_cover_height: 120px;
-  }
 }
 
 .light_mode {
