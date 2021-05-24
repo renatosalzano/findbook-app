@@ -1,0 +1,148 @@
+input,
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+svg {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  path {
+    stroke: currentColor;
+  }
+}
+
+.bar {
+  background-color: var(--select_col);
+}
+
+.fixed_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto minmax(auto, 600px) auto;
+  grid-template-rows: 10px auto;
+  grid-template-areas:
+    "div div div"
+    ". searchbar .";
+  .margin {
+    grid-area: div;
+    width: 100%;
+    background-color: var(--bg_color);
+  }
+}
+
+.search_bar_container {
+  grid-area: searchbar;
+  position: relative;
+  width: 100%;
+  height: 35px;
+  --padding: 6px 10px;
+
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.2s;
+}
+
+.middle {
+  transform: translate3d(0, calc(50vh - 35px), 0);
+}
+
+.src_container {
+  background-color: var(--search_bar_bg);
+  backdrop-filter: blur(10px);
+}
+
+.src_container {
+  position: relative;
+  display: flex;
+  width: calc(100% - var(--idle_src_bar_width));
+  height: 100%;
+  transition: width 0.2s;
+  padding: var(--padding);
+  border: var(--border);
+  z-index: 100;
+  input {
+    font-size: 16px;
+    padding: 4px;
+    width: calc(100% - 50px);
+    color: var(--input_col);
+  }
+  .search_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    border-left: var(--border);
+    color: var(--idle_col);
+    transition: color 0.2s;
+    &:hover {
+      color: var(--select_col);
+    }
+    svg {
+      padding: 5px;
+    }
+  }
+}
+
+.focus {
+  border: 1px solid var(--select_col);
+}
+.button_container {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 50;
+  transition: opacity 0.2s;
+  .advanced_button,
+  .theme_button {
+    cursor: pointer;
+    height: 100%;
+    width: 35px;
+    border: var(--border);
+    background-color: var(--search_bar_bg);
+    backdrop-filter: blur(10px);
+    transition: color 0.2s;
+
+    svg {
+      padding: 6px;
+    }
+  }
+
+  // button style detail
+  .advanced_button {
+    color: var(--idle_col);
+    &:hover {
+      color: var(--select_col);
+    }
+  }
+
+  .theme_button {
+    color: var(--bulb_col);
+    &:hover {
+      color: var(--bulb_hover_col);
+    }
+  }
+  .advanced {
+    color: var(--select_col);
+  }
+}
+
+// class = { button_container hidden }
+.hidden {
+  opacity: 0;
+}
+// class = { normal_src_container extend }
+.extend {
+  width: 100%;
+}

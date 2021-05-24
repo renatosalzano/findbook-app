@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+#root {
+  width: 100%;
+  --idle_src_bar_width: 150px;
+  --input_size: 14px;
+  --border_radius: 20px;
+
+  --link: white;
+  --link_bg: #cecece86;
+
+  --title_size: 22px;
+  --title_detail_size: 24px;
+
+  --book_info_size: 14px;
+  --book_info_detail_size: 16px;
+  --book_author_detail_size: 20px;
+
+  --book_cover_width: 128px;
+  --book_cover_height: 180px;
+
+  --font_404_size: 80px;
+  --quote_404_size: 30px;
+  --book_404_padd: 40px 120px;
+}
+
+@media screen and (max-width: 600px) {
+  #root {
+    --idle_src_bar_width: 90px;
+    --border_radius: 0;
+    --font_404_size: 60px;
+    --quote_404_size: 20px;
+    --book_404_padd: 30px 60px;
+
+    --title_size: 20px;
+    --title_detail_size: 22px;
+    --book_author_detail_size: 18px;
+
+    --book_cover_width: 80px;
+    --book_cover_height: 120px;
+  }
+}
+
+.light_mode {
+  --input_col: #0c0c0c;
+  --book_title: #000000;
+  --book_info: #000000;
+  --idle_col: #b4b4b4;
+  --select_col: #2998e2;
+  --bulb_col: #2998e2;
+  --bulb_hover_col: #5f7c8f;
+  --search_bar_bg: #ffffff83;
+  --border: 1px solid #00000060;
+  --bg_color: white;
+  --book_404_col: #cecece;
+  --font_404_col: #141414;
+}
+.dark_mode {
+  --input_col: #e0e0e0;
+  --book_title: #ffffff;
+  --book_info: #e7e7e7;
+  --idle_col: #cccccc;
+  --select_col: #2998e2;
+  --bulb_col: #5f7c8f;
+  --bulb_hover_col: #2998e2;
+  --search_bar_bg: #00000083;
+  --border: 1px solid #ffffff63;
+  --bg_color: #242424;
+  --book_404_col: #43345a;
+  --font_404_col: #e4e4e4;
+}
+.layout {
+  display: grid;
+  grid-template-columns: auto minmax(auto, 600px) auto;
+  grid-template-areas: ". pages .";
+  width: 100%;
+  background-color: var(--bg_color);
+}
+
+.pages {
+  grid-area: pages;
+  display: flex;
+  flex-direction: column;
+  padding-top: 55px;
+  padding-bottom: 30px;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+.search_page {
+  grid-area: app;
+}
+
+.not_found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  strong {
+    color: var(--font_404_col);
+    font-size: var(--font_404_size);
+    font-family: "Roboto Condensed";
+  }
+  svg {
+    cursor: default;
+    padding: var(--book_404_padd);
+    color: var(--book_404_col);
+  }
+  .evil_book {
+    animation: lol 0.5s infinite;
+  }
+  .random_quotes {
+    color: var(--font_404_col);
+    font-size: var(--quote_404_size);
+    font-weight: 600;
+    font-family: "Roboto Condensed";
+  }
+}
+
+@keyframes lol {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  40% {
+    transform: translate3d(0, 10px, 0);
+  }
+}
