@@ -22,6 +22,7 @@ a {
 
   .title {
     grid-area: head;
+    display: block;
     font-size: var(--title_size);
     padding: 0 10px;
     color: var(--book_title);

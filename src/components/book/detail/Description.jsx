@@ -11,11 +11,14 @@ const Description = ({ text, max_length }) => {
   useLayoutEffect(() => {
     let { textContent } = boxRef.current;
     if (boxRef.current.textContent.length > max_length && !expand) {
-      boxRef.current.textContent = textContent.slice(0, max_length);
+      boxRef.current.textContent = textContent
+        .slice(0, max_length)
+        .replace(/<[^>]+>/g, "");
     } else {
-      boxRef.current.textContent = text;
+      boxRef.current.textContent = text.replace(/<[^>]+>/g, "");
     }
   }, [boxRef, expand, text, max_length]);
+
   return (
     <div className="description">
       <span ref={boxRef}>{text}</span>

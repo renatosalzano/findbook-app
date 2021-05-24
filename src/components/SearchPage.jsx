@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
-import { AppContext } from "../../context/AppContext";
-import NotFound from "../NotFound";
-import BookList from "./BookList";
+import { AppContext } from "../context/AppContext";
+import NotFound from "./NotFound";
+import BookList from "./book/BookList";
 
 const SearchPage = ({ match }) => {
   const src = match.params.src;

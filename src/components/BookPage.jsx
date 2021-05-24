@@ -1,6 +1,6 @@
 import { memo, useContext, useEffect } from "react";
-import { AppContext } from "../../context/AppContext";
-import BookDetail from "./BookDetail";
+import { AppContext } from "../context/AppContext";
+import BookDetail from "./book/BookDetail";
 
 const BookPage = ({ match }) => {
   const id = match.params.id;
