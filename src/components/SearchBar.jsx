@@ -24,7 +24,6 @@ const SearchBar = () => {
   };
 
   useEffect(() => {
-    console.log("loop");
     if (books.length > 0 || book || error) {
       return setFristSrc("");
     }

@@ -52,7 +52,6 @@ export const AppProvider = ({ children }) => {
         max_res: max_res,
       });
       setLoading("60");
-      console.log(res);
       if (check_error(res)) return setBooks([]); // error
       setBooks((books) => (books = res.data.items));
       update_value(query);
