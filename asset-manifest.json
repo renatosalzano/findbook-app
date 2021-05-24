@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/findbook-app/static/css/main.b9511025.chunk.css",
+    "main.css": "/findbook-app/static/css/main.12ee9546.chunk.css",
     "main.js": "/findbook-app/static/js/main.8ba4c37f.chunk.js",
     "main.js.map": "/findbook-app/static/js/main.8ba4c37f.chunk.js.map",
     "runtime-main.js": "/findbook-app/static/js/runtime-main.7bd72b4e.js",
@@ -8,13 +8,13 @@
     "static/js/2.dc5ed670.chunk.js": "/findbook-app/static/js/2.dc5ed670.chunk.js",
     "static/js/2.dc5ed670.chunk.js.map": "/findbook-app/static/js/2.dc5ed670.chunk.js.map",
     "index.html": "/findbook-app/index.html",
-    "static/css/main.b9511025.chunk.css.map": "/findbook-app/static/css/main.b9511025.chunk.css.map",
+    "static/css/main.12ee9546.chunk.css.map": "/findbook-app/static/css/main.12ee9546.chunk.css.map",
     "static/js/2.dc5ed670.chunk.js.LICENSE.txt": "/findbook-app/static/js/2.dc5ed670.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7bd72b4e.js",
     "static/js/2.dc5ed670.chunk.js",
-    "static/css/main.b9511025.chunk.css",
+    "static/css/main.12ee9546.chunk.css",
     "static/js/main.8ba4c37f.chunk.js"
   ]
 }
