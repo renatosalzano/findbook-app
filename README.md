@@ -14,4 +14,5 @@ Simple app that uses google book API to find information about books, developed 
 
 - [x] Minimal Design
 - [x] Easy to use
+- [x] Advanced Search Bar
 - [x] Full responsive
