@@ -1,5 +1,4 @@
-import { useCallback, useContext, useEffect, useState } from "react";
-import { AppContext } from "../context/AppContext";
+import { useCallback, useEffect, useState } from "react";
 
 export const useInputSearch = (init) => {
   /* init = { name : value, ...  } */
@@ -16,7 +15,7 @@ export const useInputSearch = (init) => {
 
   const input_to_google_query = useCallback(
     (input_obj) => {
-      /* input_obj = { input.state } */
+      /* input_obj = { input } */
       let name = Object.keys(input_obj);
       let string;
       let value = (key) => {
