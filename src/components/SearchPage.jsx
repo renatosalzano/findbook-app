@@ -7,7 +7,7 @@ const SearchPage = ({ match }) => {
   const src = match.params.src;
   const { books, search_books, error } = useContext(AppContext);
   useEffect(() => {
-    search_books({ query: src });
+    search_books({ query: src, max_res: 20 });
   }, [search_books, src]);
 
   return (
