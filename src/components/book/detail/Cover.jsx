@@ -36,7 +36,7 @@ export const Cover = ({ title, is_link, id }) => {
 
   return (
     <div onClick={select_event} className="cover cover_miss" style={style}>
-      <span>{title}</span>
+      <span>Immagine non disponibile</span>
     </div>
   );
 };
