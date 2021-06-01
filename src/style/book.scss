@@ -71,7 +71,7 @@ a {
     display: block;
     width: 100%;
     text-align: center;
-    font-size: 18px;
+    font-size: var(--book_cover_font_size);
     font-weight: 500;
     letter-spacing: -1px;
   }
